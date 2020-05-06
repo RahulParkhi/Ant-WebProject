@@ -26,7 +26,7 @@ pipeline
 		{
 			sshagent(['TomcatSSH'])
 			{
-				sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Ant-Pipeline-Job/dist/SampleAntProject.war ec2-user@172.31.89.0:/opt/apache-tomcat-9.0.34/webapps'
+				sh 'scp -o StrictHostKeyChecking=no */dist/SampleAntProject.war ec2-user@172.31.89.0:/opt/apache-tomcat-9.0.34/webapps'
 			}
 		}
 	}
