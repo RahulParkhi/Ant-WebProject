@@ -20,5 +20,15 @@ pipeline
         }
       }
     }
+	stage ('Deploy the artifact')
+	{
+		steps
+		{
+			sshagent(['TomcatSSH'])
+			{
+				sh 'scp -o StrictHostKeyChecking=no */war/*.war ec2-user@172.31.89.0:/opt/apache-tomcat-9.0.34/webapps'
+			}
+		}
+	}
   }
 }
