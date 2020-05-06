@@ -20,7 +20,7 @@ pipeline
         }
       }
     }
-    stage ('Archive the artifacts)
+    stage ('Archive the artifacts')
     {
 	steps
 	{
