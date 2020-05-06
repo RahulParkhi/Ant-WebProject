@@ -16,7 +16,7 @@ pipeline
       {
         withAnt(installation: 'Ant', jdk: 'Java')
         {
-          sh 'ant init'
+          sh 'ant war'
         }
       }
     }
